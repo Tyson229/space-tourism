@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
@@ -11,10 +11,11 @@ const config: Config = {
       fontFamily: {
         serif: ["var(--font-bellfair)"],
         mono: ["var(--font-barlow_condensed)"],
+        sans: ["var(--font-barlow)"],
       },
       backgroundImage: {
-        "home-desktop" : "url('/assets/home/background-home-desktop.jpg')"
-      }
+        "home-desktop": "url('/assets/home/background-home-desktop.jpg')",
+      },
       // backgroundImage: {
       //   "home": "url(./assets/home/background-home-desktop.jpg)",
       // },
@@ -22,4 +23,4 @@ const config: Config = {
   },
   plugins: [],
 };
-export default config
+export default config;

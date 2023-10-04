@@ -1,31 +1,39 @@
-import React from 'react'
-import NavLink from './NavLink';
+import React from "react";
+import NavLink from "./NavLink";
 
 const NavLinks = () => {
   return (
-    <ul className="flex gap-8 ps-28 h-16 backdrop-blur-2xl justify-center bg-white/5 grow ">
+    <ul className="col-span-7 col-start-6 flex h-16 w-full justify-center gap-12 bg-white/5 ps-28 backdrop-blur-2xl">
       <li>
         <NavLink path="/">
-          <span className="font-bold">00&nbsp;</span>Home
+          <div className="flex gap-3">
+            <span className="font-bold">00</span> Home
+          </div>
         </NavLink>
       </li>
       <li>
         <NavLink path="/destination">
-          <span className="font-bold">01&nbsp;</span>Navigation
+          <div className="flex gap-3">
+            <span className="font-bold">01</span> Navigation
+          </div>
         </NavLink>
       </li>
       <li>
         <NavLink path="/crew">
-          <span className="font-bold">02&nbsp;</span>Crew
+          <div className="flex gap-3">
+            <span className="font-bold">02</span> Crew
+          </div>
         </NavLink>
       </li>
       <li>
         <NavLink path="/technology">
-          <span className="font-bold">03&nbsp;</span>Technology
+          <div className="flex gap-3">
+            <span className="font-bold">03</span> Technology
+          </div>
         </NavLink>
       </li>
     </ul>
   );
-}
+};
 
-export default NavLinks
+export default NavLinks;

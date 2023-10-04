@@ -6,14 +6,14 @@ import NavLinks from "./NavLinks";
 
 const Navbar = () => {
   return (
-    <nav className="w-full max-w-screen-2xl flex text-white font-mono items-center absolute top-8 gap-4">
-      <Link href="/">
+    <nav className="absolute top-8 col-span-12 grid w-full max-w-screen-2xl grid-cols-12 place-items-center gap-8 font-mono text-white">
+      <Link href="/" className="col-start-1">
         <Image
           width={48}
           height={48}
           alt="Logo"
           src="/assets/shared/logo.svg"
-          className={`bg-white rounded-full`}
+          className={`rounded-full bg-white`}
         />
       </Link>
       <BreakLine />

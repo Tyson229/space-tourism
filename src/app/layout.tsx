@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { barlow_condensed, bellefair } from "@/lib/fonts";
+import { barlow_condensed, bellefair, barlow } from "@/lib/fonts";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${barlow_condensed.variable} ${bellefair.variable}`}
+      className={`${barlow_condensed.variable} ${bellefair.variable} ${barlow.variable}`}
     >
       <head>
         <link
@@ -26,11 +26,9 @@ export default function RootLayout({
           href="/assets/favicon-32x32.png"
         ></link>
       </head>
-      <body className="relative w-screen h-screen bg-black flex justify-center">
+      <body className="relative h-screen w-screen grid grid-cols-12 place-items-center gap-8 overflow-hidden">
         <Navbar />
-        <section className="flex gap-4 bg-black w-full h-full text-white">
-          {children}
-        </section>
+        {children}
       </body>
     </html>
   );
