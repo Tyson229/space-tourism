@@ -26,7 +26,7 @@ export default function RootLayout({
           href="/assets/favicon-32x32.png"
         ></link>
       </head>
-      <body className="relative h-screen w-screen grid grid-cols-12 place-items-center gap-8 overflow-hidden">
+      <body className="relative h-screen w-screen grid grid-cols-12 place-items-center overflow-hidden">
         <Navbar />
         {children}
       </body>

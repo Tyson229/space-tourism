@@ -11,8 +11,8 @@ const NavLink = ({
   path: string;
   children: React.ReactNode;
 }) => {
-  const currentPath = usePathname();
-
+  const currentPath = path.length > 1 ? usePathname().slice(0, path.length) : usePathname();
+  
   return (
     <Link
       href={path}

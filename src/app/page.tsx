@@ -3,7 +3,7 @@ import ExploreButton from "@/components/ExploreButton";
 export default function Home() {
   return (
     <div className="grid h-full w-full grid-rows-5 place-items-center bg-home-desktop bg-cover bg-center bg-no-repeat col-span-12">
-      <div className="row-span-2 row-start-3 w-full max-w-screen-2xl items-end justify-between grid grid-cols-12 pl-14 gap-8">
+      <div className="row-span-2 row-start-3 w-full max-w-screen-2xl items-end justify-between grid grid-cols-12 gap-8">
         <div className="flex flex-col col-start-2 col-span-4">
           <span className="font-mono text-3xl uppercase text-[#D0D6F9]">
             So, you want to travel to

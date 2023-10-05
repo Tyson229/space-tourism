@@ -2,6 +2,7 @@ import React from "react";
 import data from "@/lib/data.json";
 import Image from "next/image";
 import { redirect } from "next/navigation";
+import Slider from "../components/slider";
 interface PersonInterface {
   name: string;
   images: {
@@ -22,7 +23,8 @@ const Page = ({ params }: { params: { id: string[] } }) => {
   return (
     <>
       {result ? (
-        <div>
+        <div className="col-span-10 col-start-2 grid h-full  grid-cols-12 justify-center ">
+          <Slider />
           <div>
             <div>{result.role}</div>
             <div>{result.name}</div>
@@ -30,9 +32,10 @@ const Page = ({ params }: { params: { id: string[] } }) => {
           </div>
           <Image
             src={result.images.webp.slice(1)}
-            width={100}
-            height={100}
+            style={{ objectFit: "contain", objectPosition: "left" }}
             alt={result.name}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            fill
             priority
           />
         </div>

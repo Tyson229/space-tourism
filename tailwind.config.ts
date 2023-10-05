@@ -15,10 +15,13 @@ const config: Config = {
       },
       backgroundImage: {
         "home-desktop": "url('/assets/home/background-home-desktop.jpg')",
-      },
-      // backgroundImage: {
-      //   "home": "url(./assets/home/background-home-desktop.jpg)",
-      // },
+
+        "destination-desktop":
+          "url('/assets/destination/background-destination-desktop.jpg')",
+
+        "crew-desktop":
+          "url('/assets/crew/background-crew-desktop.jpg')",
+      }
     },
   },
   plugins: [],

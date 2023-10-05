@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import data from "@/lib/data.json";
 import { redirect } from "next/navigation";
+import Tabs from "../components/tabs";
 
 interface resultProp {
   name: string;
@@ -10,6 +11,7 @@ interface resultProp {
     webp: string;
   };
   description: string;
+  distance: string;
   travel: string;
 }
 
@@ -22,20 +24,46 @@ const Page = ({ params }: { params: { planet: string[] } }) => {
   return (
     <>
       {result ? (
-        <div className="w-full">
-          <div>{result?.name}</div>
-          <Image
-            alt={result?.name ?? ""}
-            width={300}
-            height={300}
-            src={result?.images.webp.slice(1) ?? ""}
-            priority
-          />
-          <p>{result?.description}</p>
-          <p>{result?.travel}</p>
+        <div className="col-span-10 col-start-2 grid grid-cols-12  justify-center">
+          <div className="relative col-span-6 w-full">
+            <Image
+              alt={result?.name ?? ""}
+              style={{ objectFit: "contain", objectPosition: "left" }}
+              src={result?.images.png.slice(1) ?? ""}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              fill
+              priority
+            />
+          </div>
+          <div className="col-span-5 col-start-8 flex flex-col gap-9">
+            <Tabs />
+            <div className="font-serif text-8xl uppercase">{result?.name}</div>
+            <p className="h-[10vh] font-sans text-lg text-[#D0D6F9] ">
+              {result?.description}
+            </p>
+            <div className="mt-5 h-px w-full bg-[#383B4B]"></div>
+            <div className="grid grid-cols-2 content-center">
+              <div className="grid gap-3">
+                <div className="font-mono text-sm uppercase text-[#D0D6F9]">
+                  avg. distance
+                </div>
+                <p className="font-serif text-3xl uppercase">
+                  {result?.distance}
+                </p>
+              </div>
+              <div className="grid gap-3">
+                <div className="font-mono text-sm uppercase text-[#D0D6F9]">
+                  est. travel time
+                </div>
+                <p className="font-serif text-3xl uppercase">
+                  {result?.travel}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       ) : (
-        redirect('/destination')
+        redirect("/destination")
       )}
     </>
   );
