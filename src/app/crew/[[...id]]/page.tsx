@@ -23,20 +23,26 @@ const Page = ({ params }: { params: { id: string[] } }) => {
   return (
     <>
       {result ? (
-        <div className="col-span-10 col-start-2 grid h-full  grid-cols-12 justify-center ">
-          <Slider />
-          <div>
-            <div>{result.role}</div>
-            <div>{result.name}</div>
-            <div>{result.bio}</div>
+        <div className="col-span-10 col-start-2 grid grid-cols-12">
+          <div className="col-span-6 flex flex-col">
+            <div className="mb-4 font-serif text-[32px] uppercase opacity-50">
+              {result.role}
+            </div>
+            <div className="mb-7 font-serif text-[56px] uppercase">
+              {result.name}
+            </div>
+            <div className="w-5/6 font-sans text-lg text-[#D0D6F9]">
+              {result.bio}
+            </div>
           </div>
           <Image
             src={result.images.webp.slice(1)}
-            style={{ objectFit: "contain", objectPosition: "left" }}
+            style={{ objectFit: "contain", objectPosition: "center" }}
             alt={result.name}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             fill
             priority
+            className="col-span-5 col-start-7"
           />
         </div>
       ) : (

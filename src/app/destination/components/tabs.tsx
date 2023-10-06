@@ -2,9 +2,9 @@
 
 import React from "react";
 import data from "@/lib/data.json";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 const Tabs = () => {
   const currentPath = usePathname();
   const path =

@@ -19,9 +19,11 @@ const config: Config = {
         "destination-desktop":
           "url('/assets/destination/background-destination-desktop.jpg')",
 
-        "crew-desktop":
-          "url('/assets/crew/background-crew-desktop.jpg')",
-      }
+        "crew-desktop": "url('/assets/crew/background-crew-desktop.jpg')",
+
+        "technology-desktop":
+          "url('/assets/technology/background-technology-desktop.jpg')",
+      },
     },
   },
   plugins: [],
