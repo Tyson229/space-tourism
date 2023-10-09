@@ -1,19 +1,20 @@
 import Link from "next/link";
 import React from "react";
-import BreakLine from "./BreakLine";
 import Image from "next/image";
+import BreakLine from "./BreakLine";
 import NavLinks from "./NavLinks";
 
 const Navbar = () => {
   return (
-    <nav className="absolute z-20 top-8 col-span-12 grid w-full max-w-screen-2xl grid-cols-12 place-items-center gap-10 font-mono text-white">
-      <Link href="/" className="col-start-1">
+    <nav className="flex w-full max-w-screen-2xl items-center p-6 font-mono text-white md:absolute md:top-8 md:z-20 md:col-span-12 md:grid md:grid-cols-12 md:place-items-center md:gap-10 md:p-0">
+      <Link href="/" className="md:col-start-1">
         <Image
           width={48}
           height={48}
           alt="Logo"
           src="/assets/shared/logo.svg"
           className={`rounded-full bg-white`}
+          priority
         />
       </Link>
       <BreakLine />

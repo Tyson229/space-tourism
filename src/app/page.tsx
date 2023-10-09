@@ -2,13 +2,13 @@ import ExploreButton from "@/components/ExploreButton";
 
 export default function Home() {
   return (
-    <div className="grid h-full w-full grid-rows-5 place-items-center bg-home-desktop bg-cover bg-center bg-no-repeat col-span-12">
-      <div className="row-span-2 row-start-3 w-full max-w-screen-2xl items-end justify-between grid grid-cols-12 gap-8">
-        <div className="flex flex-col col-start-2 col-span-4">
-          <span className="font-mono text-3xl uppercase text-[#D0D6F9]">
+    <div className="bg-home-mobile md:bg-home-tablet h-full w-full bg-cover bg-center bg-no-repeat md:col-span-12 md:grid md:grid-rows-5 md:place-items-center xl:bg-home-desktop border">
+      <div className="md:row-span-2 md:row-start-3 md:grid w-full max-w-screen-2xl md:grid-cols-12 md:items-end md:justify-between gap-8">
+        <div className="md:col-span-4 md:col-start-2 flex flex-col">
+          <span className="font-mono uppercase text-[#D0D6F9] xl:text-3xl">
             So, you want to travel to
           </span>
-          <span className="font-serif text-[9.4rem] uppercase text-white">
+          <span className="font-serif text-7xl md:text-[9.4rem] uppercase text-white">
             Space
           </span>
           <span className="font-mono text-lg text-[#D0D6F9]">
