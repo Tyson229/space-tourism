@@ -23,10 +23,10 @@ const PlanetImage = () => {
   );
 
   return (
-    <div className="relative aspect-square w-1/2 mt-8 mb-6 md:mt-16 md:mb-14">
+    <div className="relative mb-6 mt-8 aspect-square w-1/2 md:mb-14 md:mt-16 lg:row-span-2 lg:ml-12 lg:w-4/6 ">
       <Image
         alt={destination?.name ?? ""}
-        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 70vw, 100vw"
+        sizes="(max-width: 768px) 30vw, (max-width: 1024px) 40vw, 60vw"
         src={
           destination?.images.png.slice(1) ??
           destination?.images.webp.slice(1) ??

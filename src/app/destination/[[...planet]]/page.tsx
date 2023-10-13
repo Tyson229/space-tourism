@@ -22,16 +22,16 @@ const Page = ({ params }: { params: { planet: string[] } }) => {
   return (
     <>
       {result ? (
-        <div className="mb-10 flex w-full max-w-xl flex-col items-center">
-          <h2 className="font-serif text-6xl uppercase text-white md:mb-2 md:text-[5rem]">
+        <div className="mb-10 flex w-full max-w-xl flex-col items-center lg:col-start-2 lg:items-start">
+          <h2 className="font-serif text-6xl uppercase text-white md:mb-2 md:text-[5rem] lg:text-8xl">
             {result?.name}
           </h2>
-          <p className="text-center font-sans text-sm text-[#D0D6F9] md:text-base">
+          <p className="text-center font-sans text-sm text-[#D0D6F9] md:text-base lg:text-justify lg:text-lg">
             {result?.description}
           </p>
           <div className="my-8 h-px w-full bg-[#383B4B] md:mb-7 md:mt-12"></div>
 
-          <div className="flex w-full flex-col items-center gap-8 md:flex-row md:justify-evenly">
+          <div className="flex w-full flex-col items-center gap-8 md:flex-row md:justify-evenly lg:justify-start lg:space-x-16">
             <p className="flex flex-col items-center gap-3">
               <span className="font-mono text-sm uppercase text-[#D0D6F9]">
                 avg. distance
