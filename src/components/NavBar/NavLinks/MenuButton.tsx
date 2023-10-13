@@ -1,4 +1,3 @@
-"use client";
 import { NavBarContext } from "@/context/context";
 import React, { useContext } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";

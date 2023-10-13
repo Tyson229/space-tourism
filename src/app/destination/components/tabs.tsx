@@ -11,7 +11,7 @@ const Tabs = () => {
     currentPath === "/destination" ? "/destination/Moon" : currentPath;
 
   return (
-    <ul className="flex gap-9 ">
+    <ul className="mb-6 md:mb-8 flex gap-9">
       {data.destinations.map(({ name }, i) => (
         <li key={i}>
           <Link
@@ -20,7 +20,7 @@ const Tabs = () => {
               path === `/destination/${name}`
                 ? "border-b-2 border-white text-white transition-all"
                 : "transition-color border-b-2 border-transparent duration-200 ease-in hover:border-[#979797] hover:text-white"
-            } pb-2 font-mono uppercase text-[#D0D6F9]`}
+            } pb-2 font-mono text-sm uppercase text-[#D0D6F9] md:text-base`}
           >
             {name}
           </Link>

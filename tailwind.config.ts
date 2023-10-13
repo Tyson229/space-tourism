@@ -15,12 +15,16 @@ const config: Config = {
       },
       backgroundImage: {
         "home-desktop": "url('/assets/home/background-home-desktop.jpg')",
-
         "home-mobile": "url('/assets/home/background-home-mobile.jpg')",
         "home-tablet": "url('/assets/home/background-home-tablet.jpg')",
 
         "destination-desktop":
           "url('/assets/destination/background-destination-desktop.jpg')",
+        "destination-tablet":
+          "url('/assets/destination/background-destination-tablet.jpg')",
+        "destination-mobile":
+          "url('/assets/destination/background-destination-mobile.jpg')",
+
 
         "crew-desktop": "url('/assets/crew/background-crew-desktop.jpg')",
 
