@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const Tabs = () => {
   const tech = data.technology;
   const currentPath = usePathname();
-  const path = currentPath === "/technology" ? "/destination/0" : currentPath;
+  const path = currentPath === "/technology" ? "/technology/0" : currentPath;
 
   return (
     <ul className="flex gap-4 lg:flex-col">
