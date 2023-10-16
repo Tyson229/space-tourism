@@ -11,14 +11,14 @@ const NavLink = ({
   number: string;
   title: string;
 }) => {
-  const currentPath =
-    path.length > 1 ? usePathname().slice(0, path.length) : usePathname();
+  const currentPath = usePathname();
+  const modifiedPath = path.length > 1 ? currentPath.slice(0, path.length) : currentPath;
 
   return (
     <Link
       href={path}
       className={`${
-        currentPath === path
+        modifiedPath === path
           ? "border-white transition-all "
           : " transition-color border-transparent duration-200 ease-in hover:border-[#979797]"
       } flex h-full select-none place-items-center uppercase max-md:border-e-4 md:border-b-2 md:text-sm lg:text-base`}

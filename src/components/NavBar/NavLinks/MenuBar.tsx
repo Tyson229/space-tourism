@@ -30,7 +30,7 @@ const MenuBar = () => {
       document.removeEventListener("click", handleClickedOutside);
       window.removeEventListener("resize", handleWindowResize);
     };
-  }, [isOpen, windowWidth]);
+  }, [isOpen, windowWidth, setIsOpen]);
 
   const menuBarClasses: string = `absolute right-0 top-0 z-50 flex h-screen w-[70%] max-w-sm flex-col items-end gap-10 bg-white/5 py-10 text-white backdrop-blur-xl transition-transform duration-200 ease-linear ${
     isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-20"
