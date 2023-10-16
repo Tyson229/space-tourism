@@ -4,10 +4,10 @@ import PageHeading from "@/components/PageHeading";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="bg-start h-full w-full justify-center bg-destination-mobile bg-cover bg-no-repeat md:bg-destination-tablet lg:bg-destination-desktop">
+    <main className="bg-start bg-technology-mobile md:bg-technology-tablet h-full w-full justify-center bg-cover bg-no-repeat lg:bg-technology-desktop">
       <DarkBackdrop>
-        <ContentContainer className="justify-start md:place-items-start lg:pl-20">
-          <PageHeading prefix="01" title="pick your destination" />
+        <ContentContainer className="justify-start max-lg:px-0 md:place-items-start lg:pl-20">
+          <PageHeading prefix="03" title="space launch 101" styles="max-lg:px-6"/>
           {children}
         </ContentContainer>
       </DarkBackdrop>

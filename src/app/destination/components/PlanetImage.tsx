@@ -23,7 +23,7 @@ const PlanetImage = () => {
   );
 
   return (
-    <div className="relative mb-6 mt-8 aspect-square w-1/2 md:mb-14 md:mt-16 lg:row-span-2 lg:ml-12 lg:w-4/6 ">
+    <div className="relative mb-6 mt-8 aspect-square h-[90%] max-md:w-1/2 md:mb-14 md:mt-16 lg:row-span-2 lg:place-self-center">
       <Image
         alt={destination?.name ?? ""}
         sizes="(max-width: 768px) 30vw, (max-width: 1024px) 40vw, 60vw"

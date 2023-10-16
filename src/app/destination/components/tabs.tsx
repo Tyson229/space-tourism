@@ -11,7 +11,7 @@ const Tabs = () => {
     currentPath === "/destination" ? "/destination/Moon" : currentPath;
 
   return (
-    <ul className="mb-6 flex gap-9 md:mb-8 lg:mb-0 lg:self-end">
+    <ul className="mb-6 flex gap-9 md:mb-8 lg:mb-0">
       {data.destinations.map(({ name }, i) => (
         <li key={i}>
           <Link

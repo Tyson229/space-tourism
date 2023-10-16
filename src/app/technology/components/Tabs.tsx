@@ -10,16 +10,19 @@ const Tabs = () => {
   const path = currentPath === "/technology" ? "/destination/0" : currentPath;
 
   return (
-    <ul className="col-start-2 grid h-min -translate-y-20 gap-8">
+    <ul className="flex gap-4 lg:flex-col">
       {tech.map((t, i) => (
-        <li
-          className={`${
-            path === `/technology/${i}`
-              ? "bg-white text-black"
-              : "border-white/25 border text-white"
-          } flex h-20 w-20 items-center justify-center rounded-full  font-serif text-[32px]`}
-        >
-          <Link href={`/technology/${i}`}>{i + 1}</Link>
+        <li key={i}>
+          <Link
+            href={`/technology/${i}`}
+            className={`${
+              path === `/technology/${i}`
+                ? "bg-white text-black"
+                : "border border-white/25 text-white hover:cursor-pointer hover:border-white"
+            } flex h-10 w-10 items-center justify-center rounded-full font-serif text-base  md:h-[60px] md:w-[60px] md:text-2xl`}
+          >
+            {i + 1}
+          </Link>
         </li>
       ))}
     </ul>

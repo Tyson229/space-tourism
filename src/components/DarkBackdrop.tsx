@@ -1,8 +1,10 @@
 import React from "react";
 
-const DarkBackdrop = () => {
+const DarkBackdrop = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="absolute h-full w-full items-center bg-black bg-opacity-25"></div>
+    <div className="relative flex w-full h-full justify-center bg-black bg-opacity-25">
+      {children}
+    </div>
   );
 };
 

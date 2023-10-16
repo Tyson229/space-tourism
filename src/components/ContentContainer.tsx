@@ -5,7 +5,7 @@ const ContentContainer = ({
   className,
 }: {
   children: React.ReactNode;
-  className?: string ;
+  className?: string;
 }) => {
   return (
     <div
@@ -13,7 +13,7 @@ const ContentContainer = ({
     >
       {children}
     </div>
-  ); 
+  );
 };
 
 export default ContentContainer;

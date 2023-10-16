@@ -1,9 +1,8 @@
 import React from "react";
 import data from "@/lib/data.json";
-import Image from "next/image";
 import { redirect } from "next/navigation";
-import Slider from "../components/slider";
-interface PersonInterface {
+
+interface CrewInterface {
   name: string;
   images: {
     png: string;
@@ -18,32 +17,23 @@ const Page = ({ params }: { params: { id: string[] } }) => {
   let index: number;
   if (memberID) index = +memberID;
   else index = 0;
-  const result: PersonInterface | undefined = data.crew[index];
+  const result: CrewInterface | undefined = data.crew[index];
 
   return (
     <>
       {result ? (
-        <div className="col-span-10 col-start-2 grid grid-cols-12">
-          <div className="col-span-6 flex flex-col">
-            <div className="mb-4 font-serif text-[32px] uppercase opacity-50">
+        <div className="flex w-full flex-col items-center gap-4 max-md:mb-8 lg:row-start-1 lg:items-start lg:h-full lg:justify-end">
+          <div className="flex flex-col items-center gap-2 font-serif text-white lg:items-start">
+            <span className="uppercase opacity-50 md:text-2xl">
               {result.role}
-            </div>
-            <div className="mb-7 font-serif text-[56px] uppercase">
+            </span>
+            <span className="text-2xl uppercase md:text-5xl">
               {result.name}
-            </div>
-            <div className="w-5/6 font-sans text-lg text-[#D0D6F9]">
-              {result.bio}
-            </div>
+            </span>
           </div>
-          <Image
-            src={result.images.webp.slice(1)}
-            style={{ objectFit: "contain", objectPosition: "center" }}
-            alt={result.name}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            fill
-            priority
-            className="col-span-5 col-start-7"
-          />
+          <p className="w-full max-w-2xl text-center font-sans text-[15px] text-[#D0D6F9] md:text-lg lg:text-start">
+            {result.bio}
+          </p>
         </div>
       ) : (
         redirect("/crew")

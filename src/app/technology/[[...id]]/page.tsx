@@ -21,25 +21,16 @@ const Page = ({ params }: { params: { id: string[] } }) => {
   return (
     <>
       {result ? (
-        <div className=" col-span-10 col-start-3 grid grid-cols-12 h-full">
-          <div className="col-span-5 flex flex-col">
-            <div className="font-mono uppercase text-[#D0D6F9] mb-3">
-              the terminology...
-            </div>
-            <div className="font-serif text-6xl uppercase mb-4">{result.name}</div>
-            <div className="font-sans text-lg text-[#D0D6F9]">
-              {result.description}
-            </div>
+        <div className="flex w-full flex-col items-center px-6 md:justify-center lg:items-start">
+          <div className="mb-2 font-mono text-sm uppercase text-[#D0D6F9] md:mb-4 md:text-base">
+            the terminology...
           </div>
-          <Image
-            src={result.images.portrait.slice(1)}
-            style={{ objectFit: "contain", objectPosition: "center" }}
-            alt={result.name}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            fill
-            priority
-            className="col-start-8 col-span-4"
-          />
+          <div className="mb-4 font-serif text-2xl uppercase text-white md:text-5xl lg:text-6xl">
+            {result.name}
+          </div>
+          <div className="max-lg:max-w-lg lg:max-w-xl text-center font-sans text-[15px] text-[#D0D6F9] md:text-base lg:text-start lg:text-lg">
+            {result.description}
+          </div>
         </div>
       ) : (
         redirect("/technology")
