@@ -1,6 +1,6 @@
 import React from "react";
 import PlanetImage from "../components/PlanetImage";
-import Tabs from "../components/Tabs";
+import Tabs from "@/app/destination/components/Tabs";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
