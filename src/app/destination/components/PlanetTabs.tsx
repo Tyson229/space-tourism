@@ -5,7 +5,7 @@ import data from "@/lib/data.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const Tabs = () => {
+const PlanetTabs = () => {
   const currentPath = usePathname();
   const path =
     currentPath === "/destination" ? "/destination/Moon" : currentPath;
@@ -30,4 +30,4 @@ const Tabs = () => {
   );
 };
 
-export default Tabs;
+export default PlanetTabs;
